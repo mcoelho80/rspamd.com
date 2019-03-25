@@ -32,7 +32,7 @@ Defaults may be set for the following parameters (default values used if these a
 - `default_helo`: use this RBL to test parameters sent for HELO/EHLO at SMTP time (`false` by default).
 - `default_dkim`: use this RBL to test domains found in validated DKIM signatures (`false` by default).
 - `default_dkim_domainonly`: if `true` test top-level domain only, otherwise test entire domain found in DKIM signature (`true` by default).
-- `default_emails`: use this RBL to test email addresses in form `[localpart].[domainpart].[rbl]` or if set to `"domain_only"` uses `[domainpart].[rbl]` (`false` by default).
+- `default_emails`: use this RBL to test email addresses (found in message body) in form `[localpart].[domainpart].[rbl]` or if set to `"domain_only"` uses `[domainpart].[rbl]` (`false` by default).
 - `default_unknown`: if set to `false`, do not yield a result unless the response received from the RBL is defined in its related returncodes `{}` subsection, else return the default symbol for the RBL (`false` by default).
 - `default_exclude_users`: if set to `true`, do not use this RBL if the message sender is authenticated. (`false` by default).
 - `default_exclude_private_ips`: if `true`, do not use the RBL if the sending host address is in `local_addrs` and do not check received headers baring these addresses (`true` by default).
